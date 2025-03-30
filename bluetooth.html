@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- By Michel Lundell -->
+<!-- Sön 30 Mar 2025 10:06:19 CEST -->
+
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+      function MyAlert(msg)
+      {
+        alert(msg);
+      }
+    </script>
+  </head>
+<body>
+
+<title>Example Ketonix using Bluetooth</title>
+
+<center>
+<p>Example Ketonix using  Bluetooth</p>
+<p id="need-chrome" style="display: none;"><b>You need to use the Chrome browser.</b> It can be downloaded from <a target="_blank" href="https://www.google.com/chrome/" class="ui-link">here</a></p>
+
+<p>Enable the Chrome flag "Use the new permissions backend for Web Bluetooth".</p>
+<div id="howto">
+  <table>
+      <tr>
+        <td> 1. Enter <b>"chrome://flags"</b> in Chrome URL field and hit enter.</td></tr>
+        <tr><td> 2. Search for <b>"bluetooth"</b> in flags </td>
+        </tr><tr><td> 3. Enable <b>"Use the new permissions backend for Web Bluetooth"</b></td></tr>
+        <tr><td> 4. Relaunch Chrome to make the setting effective.</td></tr>
+        <br>
+  </table>
+  <br/>
+  <br/>
+  <table width="40%">
+      <tr>
+        <td> connection: <span id="connectedUI"></span></td></tr>
+        <td> type: <span id="typeUI"></span></td></tr>
+        <td> isReady: <span id="isReadyUI"></span></td></tr>
+        <td> ppm: <span id="ppmUI"></span></td></tr>
+        <td> <span id="messageUI"></span></td></tr>
+        <tr>
+        <br>
+  </table>
+  <br/>
+  <p id="messageUI"></p>
+</div>
+
+<input id="service" type="hidden" list="services" autofocus="" value="092cb9a1-4cbe-475e-9f56-d29404dd29f1">
+<input id="characteristic" type="hidden" list="characteristics" value="092cb9a1-4cbe-475e-9f56-d29404dd0003">
+<br/>
+<br/>
+<br/>
+<div>
+  <table><tr>
+    <td><button id="startNotifications" class=" ui-btn ui-shadow ui-corner-all">Connect</button></td>
+    <td> <button id="saveButton" class=" ui-btn ui-shadow ui-corner-all">Save</button></td>
+    <td> <button id="stopNotifications" class=" ui-btn ui-shadow ui-corner-all">Disconnect</button></td>
+  </table>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
